@@ -1,0 +1,275 @@
+/*version 2*/
+
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  
+}
+
+
+/*body*/
+/*====*/
+body {
+  margin: auto;
+  max-width: 400px; 
+  border:1px solid red; /*sera à supprimer quand ce sera fini*/
+}
+
+/* container */
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  
+}
+
+
+/*header*/
+/*======*/
+
+header {
+  display: flex;
+  padding: 10px 10px;
+  background-position: center;
+  background-image: url("images/logo/ohmyfood.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 10px;
+}
+
+
+/*lieu*/
+/*====*/
+
+.lieu {
+  display:flex;
+  height:30px;
+  /* padding: 10px 10px; */
+  background-color:rgb(237,237,237);
+  font-size: 8px
+}
+
+.lieu > .fas {
+    display: none;
+}
+
+.logo-lieu {
+  /* background-color: rgb(242, 242, 242); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 63px;/*86px;*/
+}
+
+.lieu >p{
+  font-size: 8px;
+  margin-left: 11px;
+  margin-top: 9px;
+  color: rgb(42,40,44);
+  
+}
+
+/*reservation*/
+/*===========*/
+
+.reservation {
+  display:flex;
+  flex-direction: column;
+  padding:36px 10px;
+  gap:11px;
+  background-color:rgb(251,251,251);
+}
+
+.reserve-menu {
+  display:flex;
+  font-size: 13px;
+  font-weight:bold;
+  width:169px;
+  padding: 0px 14px;
+  text-align:center;
+  
+}
+.decouvre {
+  display:flex;
+  font-size: 13px;
+  font-weight:bold;
+  height:30px; /*--sera à supprimer quand il y aura du contenu*/ 
+}
+	
+.explore {
+  display:flex;
+  border-radius: 15px;
+  height:30px;
+}	
+	
+/*fonctionnement*/
+/*============*/
+
+.fonctionnement {
+counter-reset: list;  
+}
+.fonctionnement ol {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-direction: column;
+margin: 12px 26px;
+padding: 0;
+
+}
+.fonctionnement ol li {
+  background-color: #fff;
+  list-style: none;
+  border-radius: 15px;
+  position: relative;
+  padding: 20px;
+  box-shadow:0px 0px 16px 0px rgba(0,0,0,0.45);
+  cursor: pointer;
+  
+}
+.fonctionnement ol li i {
+  margin-right: 20px;
+  margin-left: 20px;
+  color: #7e7e7e;
+  font-size: 16px;
+ 
+}
+.fonctionnement ol li::before {
+  content: counter(list);
+  counter-increment: list;
+  width:25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  color:#fff;
+  background-color: #9356DC;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.fonctionnement ol li:hover {
+  background-color: lighten(#FF79DA,30%);
+}
+
+.choix {
+  display:flex;
+  border-radius: 15px;
+  background-color:white;
+  height:60px;
+}
+  
+/*liste_resto*/
+/*===========*/
+
+.liste_resto { 
+  display:flex;
+  flex-direction: column;
+  padding:45px 10px;
+  gap:10px;
+  background-color:rgb(251,251,251);
+} 
+ 
+ .restaurant {
+  display:flex;
+  border-radius: 15px;
+  background-color:white;
+  height:130px;
+ }
+
+
+ 
+/*footer*/
+/*======*/
+
+footer {
+  display: flex;
+  padding:10px 15px;
+  background: rgb(48,47,45);
+  margin: auto;
+}
+
+.titre {
+  font-family: Shrikhand, sans-serif;
+  font-weight:200;
+  font-size:9px;
+  margin:2px 0px 9px 0px;
+}
+
+.prop-rest {
+  display:flex;
+  font-size:8px;
+}
+
+.logo-rest {
+  margin-right:5px;
+}
+
+.dev-part {
+  display:flex;
+  font-size:8px;
+}
+
+.logo-part {
+  color: white;
+  margin-right:5px;
+}
+
+
+.contact {
+  display:flex;
+  flex-direction: column;
+  font-size:8px;
+  color:white;
+  margin-bottom: 6px;
+ }
+
+.contact >p{
+  margin: 1px 0px;
+}
+
+
+
+/* divers éléments pour une autre version */
+
+/* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+} */
+
+/* .header {
+  width: 412px;
+  height: 46px;
+  justify-content: center;
+  background-image: url("images/logo/ohmyfood.png");
+  background-size: cover; /*284px 44px;
+  background-position: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+} 
+
+.reserve-menu {
+  display:flex;
+  flex:1;
+  font-size: 13px;
+  font-weight:bold;
+  width:150px;
+  height:50px;
+  padding: 0px 14px;
+  margin:24px;
+  
+}
+
+letter-spacing: 0px;
+
+
+*/
+ 
+
+/*<img src="./images/logo/ohmyfood.png" alt="logo ohmyfood.png" />*/
