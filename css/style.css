@@ -1,11 +1,10 @@
-/*version 5 - 12/10/22*/
 
 * {
   text-decoration: none;
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
-  /* border:1px dashed black; */
+
 }
 
 /*body*/
@@ -36,7 +35,6 @@ header {
 
 .lieu {
   display: flex;
-  /* padding: 10px 10px; */
   background-color: rgb(237, 237, 237);
   gap: 1rem;
   justify-content: center;
@@ -47,8 +45,8 @@ header {
 .lieu i{
   font-size: 1.2rem;
   background-color: grey;
-  -webkit-background-clip: text; /*nouveau*/
-  background-clip: text; /*nouveau*/
+  -webkit-background-clip: text; 
+  background-clip: text; 
 }
 
 .lieu input {
@@ -144,7 +142,7 @@ font-weight: 800;
   background-color: #ece1f9;
 }
 
-.choix:hover .fas {   /*couleur du font awesome au survol*/
+.choix:hover .fas {   
   color: #9356DC;
 }
 .num {
@@ -184,7 +182,7 @@ font-weight: 800;
   background-color: white;
 
   gap: 3px;
-  box-shadow: 4px 4px 0px 0px rgba(155, 232, 255, 0.1); /*pour ombrer légèrement le tour de la carte*/
+  box-shadow: 4px 4px 0px 0px rgba(155, 232, 255, 0.1); 
 }
 
 .image-resto {
@@ -248,11 +246,11 @@ font-weight: 800;
 
 .icone-coeur {
   display: flex;
-  margin-right: 1.5rem; /*nouveau*/
+  margin-right: 1.5rem; 
   
   align-items: center; 
   justify-content: center; 
-  font-size: 1.5rem; /*nouveau*/
+  font-size: 1.5rem; 
   color: black;
   cursor: pointer;
   top: 1rem; 
@@ -260,12 +258,9 @@ font-weight: 800;
 }
 
 .icone-coeur::before {
-  position: absolute; /*absolus par rapport à la fenêtre précédente*/
+  position: absolute; 
   content: "";
-  color: inherit; /*nouveau*/
-/*   -webkit-transition: font-weight 10s, color 5s;
-  -moz-transition: font-weight 10s, color 5s;
-  transition: font-weight 10s, color 5s; */
+  color: inherit; 
   font-family: "Font Awesome 5 Free";
   content: "\f004";
 }
@@ -273,27 +268,21 @@ font-weight: 800;
 .icone-coeur::after { 
   position: absolute;
   content: "";
-/*   -webkit-transition: font-weight 10s, color 5s; 
-  -moz-transition: font-weight 10s, color 5s; 
-  transition: font-weight 10s, color 5s;  */     
   font-family: "Font Awesome 5 Free";
   content: "\f004";
-  color: transparent; /*nouveau*/
-  background: radial-gradient(circle, #9356dc 0%, #ff79da 100%); /*nouveau*/
-  -webkit-background-clip: text; /*nouveau*/
-  background-clip: text; /*nouveau*/
-  font-size: 1.5rem; /*nouveau*/
-  content: "\f004"; /*nouveau*/
-  font-weight: 900; /*nouveau*/
-  opacity: 0; /*nouveau*/
-  transition: all 800ms ease-out; /*nouveau*/
+  color: transparent; 
+  background: radial-gradient(circle, #9356dc 0%, #ff79da 100%); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  font-size: 1.5rem; 
+  content: "\f004"; 
+  font-weight: 900; 
+  opacity: 0; 
+  transition: all 800ms ease-out; 
 }
 
 .icone-coeur:hover::after {
-  opacity: 1;				/*La propriété opacity définit la transparence 
-  d'un élément La propriété opacity définit la transparence d'un élément.
-  Autrement dit, elle permet de définir le degré de visibilité de l'arrière-plan
-  sur lequel est placé l'élément*/
+  opacity: 1;				
 }
 
 /*footer*/
@@ -304,7 +293,7 @@ footer {
 }
 
 .footer-titre {
-  font-family: "Shrikhand", "cursive"; /*nouveau*/
+  font-family: "Shrikhand", "cursive"; 
   color: #fff;
   font-size: 1.5rem;
   padding: 1.2rem;
@@ -325,7 +314,7 @@ footer .footer_list a {
   font-size: 15px;
 }
 
-footer .footer_list .fas_p { /*nouveau*/
+footer .footer_list .fas_p { 
  
   display: flex;
   align-items: center;

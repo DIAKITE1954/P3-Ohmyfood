@@ -1,36 +1,26 @@
-/* Menu */
-/*=======*/
-
-/*version 2 - 17/10/22*/
 
 * {
   text-decoration: none;
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
-  /* border:1px dashed black; */
 }
 
-
 /*body*/
-/*====*/
+
 body {
   margin: auto;
-  max-width: 246px; /*285px;*/
   border:1px solid rgb(237,237,237);
 }
 
 /* container */
 
 .container {
-  max-width: 246px;/*285px;*/
-  margin: auto;
+ margin: auto;
   
 }
 
-
 /*header*/
-/*======*/
 
 header {
   display: flex;
@@ -38,7 +28,6 @@ header {
 
 
 .ohmyfood {
-  /* display: flex; */
   flex:3;
   padding: 10px 10px;
   background-position: center;
@@ -52,12 +41,12 @@ header {
   display: flex;
   /* flex:1; */
   align-items: center;
-  font-size:10px;
+  font-size:14px;
   margin-left:8px;
-}
-.flèche:hover {
   
-	
+  }
+.flèche:hover .fas {
+ transform:scale(1.4);
 }
 
 .ohmyfood > .fas {
@@ -65,16 +54,12 @@ header {
 }
 
 /* bannière */
-/*==========*/
 
 .bannière {
-  /* height: 143px; */
-  /* border-top-left-radius: 12px; */
-  /* border-top-right-radius: 12px; */
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 155px;
+  height: 300px;
  }
 
 
@@ -94,7 +79,6 @@ header {
 }
 
 /*menu*/
-/*====*/
 
 .menu {
   display:flex;
@@ -104,20 +88,8 @@ header {
   border-top-right-radius: 25px;
   margin-top: -30px;
   background-color: rgb(244,249,247);
-  animation-duration: 3s; /*Présentation progressif des menus*/
-  animation-name: progressif; /*Nom de l'animation progressif*/
+  
 }
-
-@keyframes progressif { /*Début production animation */
-  from {				
-    margin-top: 100%;
-    height: 300%;
-  }
-  to {					
-    margin-top: -30px; /*Parce que le menu va empièter sur la bannière de 30px */
-    height: 110%;	/*Fin production animation */
-  }
-} 						/*Fin présentation progressif des menus */
 
 .titre-menu {
   display:flex;
@@ -131,41 +103,53 @@ header {
   flex:9;
   font-family: Shrikhand, sans-serif;
   font-weight:200;
-  font-size:14px;
+  font-size:20px;
   margin: 6px 0px;
 }
 
 .icone-coeur {
   display: flex;
+  margin-right: 1.5rem; 
   
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  font-size:12px;
-  color: grey;
+  align-items: center; 
+  justify-content: center; 
+  font-size: 1.5rem; 
+  color: black;
   cursor: pointer;
-  margin-bottom: 3px;
+  top: 1rem; 
+  right: 1rem;
+}
+
+.icone-coeur::before {
+  position: absolute; 
+  content: "";
+  color: inherit; 
+
+  font-family: "Font Awesome 5 Free";
+  content: "\f004";
+}
+
+.icone-coeur::after { 
+  position: absolute;
+  content: "";
+    
+  font-family: "Font Awesome 5 Free";
+  content: "\f004";
+  color: transparent; 
+  background: radial-gradient(circle, #9356dc 0%, #ff79da 100%); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  font-size: 1.5rem; 
+  content: "\f004"; 
+  font-weight: 900; 
+  opacity: 0; 
+  transition: all 800ms ease-out; 
 }
 
 .icone-coeur:hover::after {
-  position: absolute;
-  content: "";
-  font-weight: 900;
-  background: linear-gradient(to bottom, #FF79DA 5%, #9356dc 100%);
-  font-family: "Font Awesome 5 Free";
-  content: "\f004";
-  
+  opacity: 1;				
 }
 
-.icone-coeur::after {
-  position: absolute;
-  content: "";
-  -webkit-transition: font-weight 10s,color 5s;
-  -moz-transition: font-weight 10s,color 5s;
-  transition: font-weight 10s,color 5s;
-  font-family: "Font Awesome 5 Free";
-  content: "\f004"; 
-}
 
 .sous-menu{
   display:flex;
@@ -174,17 +158,16 @@ header {
 }
 
 .intitulé {
-  font-size: 8px;
+  font-size: 14px;
   position: relative;
   margin-bottom: 9px;
-  /* margin-top: 25px; */
   color:grey;
 }
 
 .trait {
   position:relative;
   bottom:6px;
-  width: 25px;
+  width: 35px;
   border: 1px solid #99e2d0;
 }
 
@@ -209,21 +192,20 @@ header {
   margin-left: 7px;
 }
 .plat {
-  font-size:9px;
+  font-size:13px;
   font-weight: 500;
 }
 .complément {
-  font-size:8px;
+  font-size:12px;
   color:rgb(90, 90, 90);
 }
 
 .prix {
-  display:flex;
-  flex:1;
   font-weight: 550;
   margin-top: 17px;
-  font-size: 7px;
+  font-size: 12px;
   color: rgb(26, 18, 16);
+  margin-right: 15px;
 }
 
  .icone-coche {
@@ -232,7 +214,7 @@ header {
   border-bottom-right-radius: 15px;
   background-color:#99e2d0;
   overflow: hidden;
-  height:100%;/*48px;*/
+  height:100%;
   width:0;
   align-items:center;
   justify-content: center;
@@ -241,16 +223,58 @@ header {
 
 .fa-check-circle {
   color: white;
-  font-size:10px;
+  font-size:20px;
 }
 
+@keyframes rotation_check {
+  0% {
+    transform: rotate(220deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.item-menu:hover .fa-check-circle {
+  animation: rotation_check 1s;
+}
 .item-menu:hover .icone-coche {
-  width:40px;
+  width:60px;
   justify-content: center;
 }
 
+@keyframes animation_items {
+  0%{
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    }
+}
+
+.item-menu {
+  animation: animation_items 2s;
+  animation-timing-function: cubic-bezier(0.5, 1.6, 0.35, 0.8);
+  animation-fill-mode: both;
+}
+
+.item-menu:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.item-menu:nth-child(2) {
+  animation-delay: 300ms;
+}
+
+.item-menu:nth-child(3) {
+  animation-delay: 600ms;
+}
+
+
+
 /*commander*/
-/*=========*/
 
 .commande {
 	display:flex;
@@ -269,64 +293,57 @@ header {
   color: white;
   align-items:center;
   justify-content:center;
-  font-size:8px;
-  /* background-color:rgb(223, 115, 255); */
-  background: linear-gradient(173deg, #FF79DA,50%,#9356DC);/*rgb(235, 170, 235),rgb(193, 45, 245)*/
+  font-size:14px;
+  background: linear-gradient(173deg, #FF79DA,50%,#9356DC);
   box-shadow: 0px 3px 2px 2px rgba(189, 213, 205, 0.3);
   cursor: pointer;
 }	
 
 /*footer*/
-/*======*/
 
 footer {
+  padding: 10px 15px;
+  background: rgb(48, 47, 45);
+}
+
+.footer-titre {
+  font-family: "Shrikhand", "cursive"; 
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1.2rem;
+}
+
+footer .footer_list {
   display: flex;
-  padding:10px 15px;
-  background: rgb(48,47,45);
-  margin: auto;
-}
 
-.contact {
-  display:flex;
   flex-direction: column;
-  font-size:8px;
-  color:white;
-  margin-bottom: 6px;
-  gap:2px;
- }
-
-
-.titre {
-  font-family: Shrikhand, sans-serif;
-  font-weight:200;
-  font-size:9px;
-  margin:2px 0px 9px 0px;
+  padding-left: 1rem;
+  color: #fff;
 }
 
-.prop-rest {
-  display:flex;
-  font-size:8px;
+footer .footer_list a {
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 15px;
 }
 
-.icone-rest {
-  margin-right:10px;
-  font-size:7px;
+footer .footer_list .fas_p { 
+ 
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-decoration: none;
 }
 
-.dev-part {
-  display:flex;
-  font-size:8px;
+footer .footer_list .fas_p .fas {
+  width: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 5px;
 }
 
-.icone-part {
-  color: white;
-  margin-right:7px;
-  font-size:6px;
+footer a {
+  font-size: 8px;
+  margin-top: 2px;
+  color: rgb(255, 255, 255);
 }
-
-.contact,.prop-rest,.dev-part p{
-  margin: 1px 0px;
-}
-
-
-
