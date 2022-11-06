@@ -113,7 +113,13 @@ font-weight: 800;
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.45);
   margin-top: 10px;
   cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
+
+.explore:hover{
+  transform: scale(1.1);
+}
+
 
 /*fonctionnement*/
 
@@ -247,11 +253,9 @@ font-weight: 800;
 .icone-coeur {
   display: flex;
   margin-right: 1.5rem; 
-  
   align-items: center; 
   justify-content: center; 
   font-size: 1.5rem; 
-  color: black;
   cursor: pointer;
   top: 1rem; 
   right: 1rem;
@@ -259,7 +263,6 @@ font-weight: 800;
 
 .icone-coeur::before {
   position: absolute; 
-  content: "";
   color: inherit; 
   font-family: "Font Awesome 5 Free";
   content: "\f004";
@@ -267,9 +270,7 @@ font-weight: 800;
 
 .icone-coeur::after { 
   position: absolute;
-  content: "";
   font-family: "Font Awesome 5 Free";
-  content: "\f004";
   color: transparent; 
   background: radial-gradient(circle, #9356dc 0%, #ff79da 100%); 
   -webkit-background-clip: text; 
@@ -278,7 +279,7 @@ font-weight: 800;
   content: "\f004"; 
   font-weight: 900; 
   opacity: 0; 
-  transition: all 800ms ease-out; 
+  transition: all 400ms ease-out; 
 }
 
 .icone-coeur:hover::after {
@@ -334,3 +335,28 @@ footer a {
   margin-top: 2px;
   color: rgb(255, 255, 255);
 }
+
+@media screen and (min-width:992px){
+  .items-fonctionnements{
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+
+  }
+  .items-restaurants{
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    column-gap: 20px;
+
+  }
+  .restaurant{
+    width: 100%;
+  }
+  footer .footer_list{
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
+  }
+  }
+

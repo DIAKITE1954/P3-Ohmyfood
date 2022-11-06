@@ -91,12 +91,19 @@ header {
   
 }
 
+.repas {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding-right: 10px;
+}
+
+
 .titre-menu {
   display:flex;
   padding: 13px 16px 0px 16px;
   align-items: center;
-  /* gap: 8px; */
-}
+ }
 
 .nom-resto {
   display:flex;
@@ -114,7 +121,6 @@ header {
   align-items: center; 
   justify-content: center; 
   font-size: 1.5rem; 
-  color: black;
   cursor: pointer;
   top: 1rem; 
   right: 1rem;
@@ -122,17 +128,13 @@ header {
 
 .icone-coeur::before {
   position: absolute; 
-  content: "";
-  color: inherit; 
-
+  color: black; 
   font-family: "Font Awesome 5 Free";
   content: "\f004";
 }
 
 .icone-coeur::after { 
   position: absolute;
-  content: "";
-    
   font-family: "Font Awesome 5 Free";
   content: "\f004";
   color: transparent; 
@@ -140,10 +142,9 @@ header {
   -webkit-background-clip: text; 
   background-clip: text; 
   font-size: 1.5rem; 
-  content: "\f004"; 
   font-weight: 900; 
   opacity: 0; 
-  transition: all 800ms ease-out; 
+  transition: all 400ms ease-out; 
 }
 
 .icone-coeur:hover::after {
@@ -171,12 +172,20 @@ header {
   border: 1px solid #99e2d0;
 }
 
+.items-menus {
+  flex-direction:column;
+  width:100%;
+  overflow:hidden;
+}
+
+
 .item-menu {
   display:flex;
   border-radius: 15px;
   background-color:white;
   height:48px;
   gap:12px;
+  width: 100%;
   margin: 5px 8px;
   align-items:center;
   font-size:8px;
@@ -186,10 +195,11 @@ header {
 
 .met {
   display:flex;
-  flex:8;
   flex-direction: column;
   gap:2px;
   margin-left: 7px;
+  overflow: hidden;
+  width: 80%;
 }
 .plat {
   font-size:13px;
@@ -198,6 +208,12 @@ header {
 .complément {
   font-size:12px;
   color:rgb(90, 90, 90);
+}
+
+.plat, .complément{
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
 }
 
 .prix {
@@ -216,6 +232,7 @@ header {
   overflow: hidden;
   height:100%;
   width:0;
+  margin-right: 10px;
   align-items:center;
   justify-content: center;
   transition: 0.5s ease-out all;
@@ -239,6 +256,7 @@ header {
 }
 .item-menu:hover .icone-coche {
   width:60px;
+  flex-shrink: 1;
   justify-content: center;
 }
 
@@ -260,18 +278,21 @@ header {
   animation-fill-mode: both;
 }
 
-.item-menu:nth-child(1) {
+.item-menu:nth-child(2) {
   animation-delay: 100ms;
 }
 
-.item-menu:nth-child(2) {
+.item-menu:nth-child(3) {
   animation-delay: 300ms;
 }
 
-.item-menu:nth-child(3) {
+.item-menu:nth-child(4) {
   animation-delay: 600ms;
 }
 
+.item-menu:nth-child(5) {
+  animation-delay: 900ms;
+}
 
 
 /*commander*/
@@ -295,9 +316,16 @@ header {
   justify-content:center;
   font-size:14px;
   background: linear-gradient(173deg, #FF79DA,50%,#9356DC);
-  box-shadow: 0px 3px 2px 2px rgba(189, 213, 205, 0.3);
   cursor: pointer;
+  border: transparent;
+  transition: all 300ms ease-in-out;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.45);
 }	
+
+.bouton-commande:hover{
+  transform: scale(1.1);
+}
+
 
 /*footer*/
 
@@ -347,3 +375,17 @@ footer a {
   margin-top: 2px;
   color: rgb(255, 255, 255);
 }
+
+@media screen and (min-width:992px){
+.repas {
+display:flex;
+flex-direction:row;
+}
+footer .footer_list{
+  flex-direction: row;
+  justify-content:space-around;
+  align-items:center;
+ }
+}
+
+
