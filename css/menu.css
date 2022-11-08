@@ -243,6 +243,10 @@ header {
   font-size:20px;
 }
 
+.item-menu:hover .fa-check-circle {
+  animation: rotation_check 1s;
+}
+
 @keyframes rotation_check {
   0% {
     transform: rotate(220deg);
@@ -251,13 +255,18 @@ header {
     transform: rotate(0deg);
   }
 }
-.item-menu:hover .fa-check-circle {
-  animation: rotation_check 1s;
-}
+
 .item-menu:hover .icone-coche {
   width:60px;
   flex-shrink: 1;
   justify-content: center;
+}
+
+
+.item-menu {
+  animation: animation_items 2s;
+  animation-timing-function: cubic-bezier(0.5, 1.6, 0.35, 0.8);
+  animation-fill-mode: both;
 }
 
 @keyframes animation_items {
@@ -270,12 +279,6 @@ header {
     transform: translateY(0%);
     opacity: 1;
     }
-}
-
-.item-menu {
-  animation: animation_items 2s;
-  animation-timing-function: cubic-bezier(0.5, 1.6, 0.35, 0.8);
-  animation-fill-mode: both;
 }
 
 .item-menu:nth-child(2) {
